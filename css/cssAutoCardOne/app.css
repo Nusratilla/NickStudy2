@@ -1,10 +1,4 @@
 
-.swiper-pagination-bullet-active {
-    opacity: .5;
-    --swiper-pagination-color: #fff;
-    transform: scale(1.5);
-}
-
 .horizontal-card-big-header{
     background-color: #DDFFBB;
 }

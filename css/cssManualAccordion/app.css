@@ -1,8 +1,8 @@
 
 .swiper-pagination-bullet-active {
     transform: scale(1.5);
-    --swiper-pagination-color: #000000;
-    opacity: .5; 
+    --swiper-pagination-color: #ffffff;
+    opacity: .6; 
 }
 
 .testimonials-slider-header {
