@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick Study Educatin Center</title>
     <link rel="shortcut icon" href="img/Nick-fav.png" type="image/x-icon">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'> -->
+    <link rel="stylesheet" href="css/cssFlipBook/app.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
     <link rel="stylesheet" href="css/cssAutoCardOne/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/cssAutoCardOne/app.css">
     <link rel="stylesheet" href="css/cssManualAccordion/app.css">
+    
 </head>
 <body>
     <!----------------------------- Menu Bar------------------------------------------------------>
-    <header class="header">
+    <header class="header" id="home">
         <div class="menubar">
-            <a href="#" class="logo">Nick Study</a>
+            <a href="#home" class="logo">Nick Study</a>
 
             <i class="bi bi-list" id="menu-icon"></i>
 
             <nav class="navbar">
                 <a href="#">Home</a>
-                <a href="#">About</a>
+                <a href="#about">About</a>
                 <a href="#">Services</a>
-                <a href="index.html/accordionFaq">FAQ</a>
+                <a href="#faq">FAQ</a>
                 <a href="#">Contact</a>
             </nav>
         </div>
@@ -41,9 +43,126 @@
         </div>
     </header>
 
+<!---------------------------------- Book Flip -------------------------------------------------->
+<div class="flip-book-header">
+  <h2>The Following Book is About And Features of <br> Nick Study</h2>
+  <div class="flip-book-wrapper">
+      <input type="checkbox" id="checkbox-cover">
+      <input type="checkbox" id="checkbox-page1">
+      <input type="checkbox" id="checkbox-page2">
+      <input type="checkbox" id="checkbox-page3">
+      <input type="checkbox" id="checkbox-page4">
+      <input type="checkbox" id="checkbox-page5">
+      <input type="checkbox" id="checkbox-page6">
+      <input type="checkbox" id="checkbox-page7">
+      <input type="checkbox" id="checkbox-page8">
+      <input type="checkbox" id="checkbox-page9">
+      <div class="flip-book-card">
+          <div class="flip-book-front-cover">
+              <h3>Nick Study <br> Education Center <br><span>7th Edition</span></h3>
+              <label for="checkbox-cover"></label>
+          </div>
+
+          <div class="flip-book-page" id="page1">
+              <div class="front-page">
+                  <p>1-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page1"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/1.jpg" alt="">
+                  <label for="checkbox-page1"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page2">
+              <div class="front-page">
+                  <p>2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page2"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/2.jpg" alt="">
+                  <label for="checkbox-page2"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page3">
+              <div class="front-page">
+                  <p>3-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page3"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/3.jpg" alt="">
+                  <label for="checkbox-page3"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page4">
+              <div class="front-page">
+                  <p>4-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page4"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/4.jpg" alt="">
+                  <label for="checkbox-page4"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page5">
+              <div class="front-page">
+                  <p>5-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page5"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/5.jpg" alt="">
+                  <label for="checkbox-page5"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page6">
+              <div class="front-page">
+                  <p>6-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page6"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/6.jpg" alt="">
+                  <label for="checkbox-page6"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page7">
+              <div class="front-page">
+                  <p>7-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page7"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/7.jpg" alt="">
+                  <label for="checkbox-page7"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page8">
+              <div class="front-page">
+                  <p>8-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page8"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <img src="img/imgFlipBook/1.jpg" alt="">
+                  <label for="checkbox-page8"><p class="prev-label"></p></label>
+              </div>
+          </div>
+          <div class="flip-book-page" id="page9">
+              <div class="front-page">
+                  <p>9-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nobis, numquam itaque reprehenderit perferendis sunt. Reiciendis repellat vero beatae numquam optio mollitia, architecto tenetur doloribus repudiandae id facere velit vel.</p>
+                  <label for="checkbox-page9"><p class="next-label"></p></label>
+              </div>
+              <div class="back-page">
+                  <p>Than You</p>
+                  <label for="checkbox-page9"><p class="prev-label"></p></label>
+              </div>
+          </div>
+
+          <div class="flip-book-back-cover"></div>
+      </div>
+  </div>
+</div>
+
 <!---------------------------------- Belt-slider -------------------------------------------------->
-<div class="belt-slider-main">  
-    <div class="belt-slider">  
+<div class="belt-slider-main"> 
+  <h3>IELTS Required Universities in Uzbekistan</h3> 
+    <div class="belt-slider"> 
         <div class="belt-slider-wrapper"> 
             <div class="belt-slides">      
                 <img src="img/imgBeltSlide/belt-slide-1.jpg" alt="img">
@@ -333,10 +452,12 @@
 
 <!-----------------------------------Accordion FAQ ------------------------------------------------>
 
-<div class="accordionFaq">
+<div class="accordionFaq" id="faq">
     <div class="accordion">
         <div class="headerFaq">
-            <h3>Frequently Asked Questions</h3>
+            <h2>Frequently Asked Questions</h2>
+            <h4>Popular questions related to learning English at Nick Study</h4>
+            <p>To speed up and simplify the service procedure, we have collected most common answers of them.</p>
         </div>
         <div class="contentBx">
             <div class="label">First FAQ</div>
@@ -368,6 +489,36 @@
                 <p>Lorem ipsum dolor sit amet consectetur, i esse sapiente naecbus sed architecto.</p>
             </div>
         </div>
+        <div class="contentBx">
+          <div class="label">First FAQ</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consectetur architecto quos recusandae nostrum beatae, quas consequuntur! Neque sequi esse sapiente natus adipisci dolore fuga, obcaecati non, voluptatibus sed architecto.</p>
+          </div>
+      </div>
+      <div class="contentBx">
+          <div class="label">Second FAQ</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, rerum inventore nesciunt dolore odit quo quasi autem expedita facere ex delectus voluptates, rem incidunt quae ipsam est animi neque ad impedit beatae fuga adipisci cumque non. Placeat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quaerat delectus dicta quisquam officiis? Optio fuga odit voluptatem aliquam! Ipsa. corporis, corrupti, vero quis nobis expedita reprehenderit, quam perspiciatis odio velit laboriosam culpa. consectetur, adipisicing elit. Sit consectetur architecto quos recusandae nostrum beatae, quas consequuntur! Neque sequi esse sapiente natus adipisci dolore fuga, obcaecati non, voluptatibus sed architecto.</p>
+          </div>
+      </div>
+      <div class="contentBx">
+          <div class="label">Third FAQ</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sint molestias sed architecto sapiente, aliquid officia itaque perspiciatis ut impedit fugiat explicabo deleniti mollitia eveniet veritatis quia deserunt maxime dolor recusandae? Autem deleniti voluptatum maiores, culpa molestiae vero cum ipsa earum libero nobis consequuntur eaque animi obcaecati nesciunt dignissimos ea natus voluptate maxime. Ex alias, non temporibus aliquam nobis odit, veritatis dolore, qui error eius cumque accusamus quam quod beatae? Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, eius aut ab consequuntur maiores odio dolor unde placeat dolore. Eius sequi quam nemo ratione quibusdam molestias, Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur aliquid excepturi maiores dolor harum quam error rem aspernatur ipsam? Sit ullam recusandae omnis voluptatem veritatis. Eos maxime quaerat dolorum facere vero ipsum? Voluptates consequuntur accusamus nemo odio tempore adipisci laborum, aperiam minus tempora fugiat! Error dignissimos ea vitae sequi. corrupti est voluptatum soluta. Neque sequi esse sapiente natus adipisci dolore fuga, obcaecati non, voluptatibus sed architecto.</p>
+          </div>
+      </div>
+      <div class="contentBx">
+          <div class="label">Four FAQ</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit a accusamus quis minus commodi, provident numquam? Saepe, tempora deserunt iure illo beatae cupiditate maxime doloribus error? Ad corporis ducimus aliquid iste ex voluptatem aliquam? Aperiam dicta eius dolores nihil vitae. consectetur, adipisicing elit. quas consequuntur! Neque sequi esse sapiente natus adipisci dolore fuga, obcaecati non, voluptatibus sed architecto.</p>
+          </div>
+      </div>
+      <div class="contentBx">
+          <div class="label">Five FAQ</div>
+          <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur, i esse sapiente naecbus sed architecto.</p>
+          </div>
+      </div>
     </div>
 </div>
 

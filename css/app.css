@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -283,12 +282,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 22rem;
+    min-height: 45rem;
     background: #DDFFBB;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    border: 1px solid black;
 }
-
-.accordion {
+.accordionFaq .accordion {
     max-width: 90%;
 }
 .accordion .headerFaq {
