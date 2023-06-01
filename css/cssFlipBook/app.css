@@ -1,14 +1,14 @@
 
 .flip-book-header {
     text-align: center;
-    height: 700px;
-    padding: 1rem;
+    min-height: 45rem;
+    padding: 2rem;
     background-color: #DDFFBB;
 }
 
 .flip-book-header h2 {
-    font-size: 2rem;
-    margin: 1rem;
+    font-size: 3rem;
+    margin: 3rem;
 }
 
 .flip-book-header .flip-book-wrapper {

@@ -150,12 +150,12 @@
 }
 
 .full-content .full-text h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin: .5rem;
 }
 
 .full-content .full-text p {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 @media (max-width: 900px) {
@@ -208,6 +208,11 @@
     display: grid;
     place-items: center;
     background-color: #DDFFBB;
+}
+
+.belt-slider-main h2 {
+    padding: 2rem;
+    font-size: 3rem;
 }
 
 .belt-slider-main .belt-slider {
@@ -285,7 +290,6 @@
     min-height: 45rem;
     background: #DDFFBB;
     padding: 3rem 0;
-    border: 1px solid black;
 }
 .accordionFaq .accordion {
     max-width: 90%;
@@ -298,7 +302,16 @@
     border-radius: 8px;
     background: #AACB73;
     color: #fff;
-    font-size: 1.6em;
+}
+.accordion .headerFaq h2{
+    font-size: 3rem;
+}
+.accordion .headerFaq h4 {
+    font-size: 2rem;
+    padding: 1rem;
+}
+.accordion .headerFaq p {
+    font-size: 2rem;
 }
 .accordion .contentBx {
     position: relative;
@@ -350,8 +363,6 @@
     border: 5px solid #AACB73;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
-
-
 
 /* ---------------- Footer Section ------------------- */
 

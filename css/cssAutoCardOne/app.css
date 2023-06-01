@@ -1,14 +1,17 @@
 
 .horizontal-card-big-header{
-    background-color: #DDFFBB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 45rem;
+    background: #DDFFBB;
 }
 
 .horizontal-card-big-header h2 {
     text-align: center;
     font-size: 3rem;
-    padding-bottom: 2rem;
-    color: #fff;
-
+    padding-bottom: 3rem;
 }
 
 .horizontal-card-big {

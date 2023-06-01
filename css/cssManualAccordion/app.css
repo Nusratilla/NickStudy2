@@ -6,19 +6,25 @@
 }
 
 .testimonials-slider-header {
-    background-color: #DDFFBB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 42rem;
+    background: #DDFFBB;
+    padding: 2rem 0;
 }
 
 .testimonials-slider-header h3 {
     text-align: center;
     font-size: 3rem;
-    padding: 3rem;
+    padding: 5rem;
 }
 
 .testimonials-slider {
     width: 100%;
     padding: 0 1rem;
-    height: 22rem;
+    height: 25rem;
 }
 
 .testimonials-container {
