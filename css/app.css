@@ -369,6 +369,66 @@ html {
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
+/* --------------- Contact Section --------------- */
+
+.nomail-header {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 40rem;
+    background-image: url(../img/imgNoMail/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.nomail-header .nomail-wrapper {
+    color: #fff;
+    width: 100%;
+    min-height: 40rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nomail-header .nomail-wrapper h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem;
+}
+.nomail-wrapper .nomail-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nomail-container .nomail-card a {
+    display: block;
+    text-decoration: none;
+    width: 20rem;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin: 1rem;
+    border: .3px solid #fff;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+    background: rgba(187, 224, 108, .6);
+}
+.nomail-container .nomail-card i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.nomail-wrapper .nomail-tel-numb, .nomail-contact-par {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin: 1rem;
+    border: .3px solid #fff;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+    background: rgba(187, 224, 108, .6);
+}
+
 /* ---------------- Footer Section ------------------- */
 
 .footer {

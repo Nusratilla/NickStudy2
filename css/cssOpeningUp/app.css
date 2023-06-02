@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 .opening-up-header {
+    position: relative;
     min-height: 40rem;
     background: #DDFFBB;
 }
