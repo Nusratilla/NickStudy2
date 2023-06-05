@@ -8,7 +8,7 @@
     background: #DDFFBB;
 }
 
-.horizontal-card-big-header h2 {
+.horizontal-card-big-header .horizontal-card-big-main-header {
     text-align: center;
     font-size: 3rem;
     padding-bottom: 3rem;

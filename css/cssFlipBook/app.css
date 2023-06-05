@@ -1,12 +1,14 @@
 
 .flip-book-header {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     min-height: 45rem;
     padding: 2rem;
     background-color: #DDFFBB;
 }
 
-.flip-book-header h2 {
+.flip-book-header .flip-book-main-header {
     font-size: 3rem;
     margin: 3rem;
 }

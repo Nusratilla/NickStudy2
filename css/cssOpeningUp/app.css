@@ -1,14 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 .opening-up-header {
     position: relative;
     min-height: 40rem;
     background: #DDFFBB;
 }
-.opening-up-header h2 {
+.opening-up-header .opening-up-main-header {
     text-align: center;
     padding-top: 3rem;
     font-size: 3rem;

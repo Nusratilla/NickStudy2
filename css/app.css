@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -17,6 +18,39 @@ html {
     background: linear-gradient(transparent,#99eea7,#00ff00);
     border-radius: 5rem;
 }
+
+/* ---------- Animation Section ---------- */
+.animation-right {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(100%);
+    transition: .5s;
+}
+.animation-left {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: .5s;
+}
+.animation-bottom {
+    opacity: 0;
+    filter: blur(3px);
+    transition: .5s; 
+    scale: .5;
+}
+.show-animation {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    scale: 1;
+}
+
+/* -----this for remove animation for some mobile size-----  */
+/* @media(prefers-reduse-motion) {
+    .animation-right {
+        transition: none;
+    }
+} */
 
 /* ----------------------Menu Bar ----------------- */
 .span-let {
@@ -214,7 +248,7 @@ html {
     background-color: #DDFFBB;
 }
 
-.belt-slider-main h2 {
+.belt-slider-main .belt-slider-main-header {
     padding: 2rem;
     font-size: 3rem;
 }
@@ -388,7 +422,7 @@ html {
     min-height: 40rem;
     background-color: rgba(0, 0, 0, 0.4);
 }
-.nomail-header .nomail-wrapper h2 {
+.nomail-header .nomail-wrapper .contacts-main-header {
     text-align: center;
     font-size: 3rem;
     padding: 3rem;
