@@ -36,3 +36,10 @@ const observer = new IntersectionObserver(
 );
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+// ---------------Pop Up Window--------------- 
+
+function togglePopup(idname){
+    document.getElementById(idname).classList.toggle("active");
+}
+
