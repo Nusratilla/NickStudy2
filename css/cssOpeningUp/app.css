@@ -2,10 +2,11 @@
 .opening-up-header {
     position: relative;
     min-height: 40rem;
-    background: #DDFFBB;
+    background: var(--primary-color);
 }
 .opening-up-header .opening-up-main-header {
     text-align: center;
+    color: var(--secondary-color);
     padding-top: 3rem;
     font-size: 3rem;
 }
@@ -74,10 +75,11 @@
     height: 250px;
 }
 .opening-up-card .content-box h3 {
+    color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: 600;
     padding: .5rem 0;
 }
 .opening-up-card .content-box p {
-    color: #333;
+    color: #000000;
 }

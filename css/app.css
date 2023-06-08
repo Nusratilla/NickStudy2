@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+:root {
+    --primary-color: #EEEEEE;
+    --dark-color-opacity: rgba(0, 0, 0, 0.4);
+    --secondary-color: #9818D6;
+    --primary-color-opacity: rgba(165, 85, 236, .3);
+    --accent-color: #ff4321;
+}
 
 html {
     scroll-behavior: smooth;
@@ -11,12 +18,18 @@ html {
 }
 
 ::-webkit-scrollbar {
+    background-color: var(--primary-color);
     width: .8rem
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent,#99eea7,#00ff00);
+    background: linear-gradient(transparent,#9818D6,#9818D6);
     border-radius: 5rem;
+}
+
+span {
+    color: var(--accent-color);
+    font-weight: bold;
 }
 
 /* ---------- Animation Section ---------- */
@@ -54,7 +67,7 @@ html {
 
 /* ----------------------Menu Bar ----------------- */
 .span-let {
-    color: #AACB73;
+    color: #111;
 }
 
 .menubar {
@@ -63,11 +76,11 @@ html {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--dark-color-opacity);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(1rem);
     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
@@ -79,7 +92,7 @@ html {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(187, 224, 108, 0.4));
+    background: linear-gradient(90deg, transparent, rgba(165, 85, 236, .3));
     transition: .6s;
 }
 
@@ -94,7 +107,7 @@ html {
     right: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(270deg, transparent, rgba(187, 224, 108, 0.4));
+    background: linear-gradient(270deg, transparent, rgba(165, 85, 236, .3));
     transition: .6s;
 }
 
@@ -103,7 +116,7 @@ html {
 }
 
 .logo {
-    color: #AACB73;
+    color: var(--accent-color);
     font-size: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -119,7 +132,7 @@ html {
 }
 
 .navbar a:hover {
-    color: #AACB73;
+    color: var(--accent-color);
 }
 
 #menu-icon {
@@ -176,7 +189,7 @@ html {
     color: #fff;
     width: 100%;
     height: 100%;
-    background-color: rgba(187, 224, 108, .3);
+    background-color: var(--primary-color-opacity);
 }
 
 .full-content .full-text {
@@ -188,6 +201,7 @@ html {
 }
 
 .full-content .full-text h1 {
+    color: var(--accent-color);
     font-size: 5rem;
     margin: .5rem;
 }
@@ -242,13 +256,15 @@ html {
 /*-------------------- Belt-Slider ---------------------- */
 
 .belt-slider-main {
-    height: 50vh;
     display: grid;
     place-items: center;
-    background-color: #DDFFBB;
+    height: 50vh;
+    padding: 1rem;
+    background-color: var(--primary-color);
 }
 
 .belt-slider-main .belt-slider-main-header {
+    color: var(--secondary-color);
     padding: 2rem;
     font-size: 3rem;
 }
@@ -306,7 +322,7 @@ html {
     position: absolute;
     height: 100%;
     width: 10%;
-    background: linear-gradient(to right, rgba(188, 218, 124, 0.8) 0%, rgba(255, 255, 255, 0)100%);
+    background: linear-gradient(to right, rgba(165, 85, 236, 0.8) 0%, rgba(255, 255, 255, 0)100%);
     z-index: 2;
 }
 
@@ -327,7 +343,7 @@ html {
     justify-content: center;
     align-items: center;
     min-height: 45rem;
-    background: #DDFFBB;
+    background: var(--primary-color);
     padding: 3rem 0;
 }
 .accordionFaq .accordion {
@@ -339,7 +355,7 @@ html {
     padding: 10px 0;
     margin: 20px 0;
     border-radius: 8px;
-    background: #AACB73;
+    background: var(--secondary-color);
     color: #fff;
 }
 .accordion .headerFaq h2{
@@ -359,7 +375,7 @@ html {
 .accordion .contentBx .label {
     position: relative;
     padding: 10px;
-    background: #AACB73;
+    background: var(--secondary-color);
     color: #fff;
     font-weight: 600;
     font-size: 20px;
@@ -385,6 +401,7 @@ html {
     overflow-y: auto;
 }
 .accordion .contentBx.active .content {
+    color: #000000;
     height: auto;
     padding: 10px;
 }
@@ -397,9 +414,9 @@ html {
     transform: translateY(-70%);
 }
 .accordion .contentBx.active {
-    background: #AACB73;
+    background: var(--secondary-color);
     border-radius: 8px;
-    border: 5px solid #AACB73;
+    border: 5px solid #9818D6;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
@@ -417,15 +434,26 @@ html {
     background-position: center;
 }
 .nomail-header .nomail-wrapper {
+    position: relative;
     color: #fff;
     width: 100%;
     min-height: 40rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--dark-color-opacity);
 }
 .nomail-header .nomail-wrapper .contacts-main-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 3rem;
-    padding: 3rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    top: 3rem;
+    bottom: 3rem;
+    border: .3px solid #fff;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+    background: var(--primary-color-opacity);
 }
 .nomail-wrapper .nomail-container {
     display: flex;
@@ -433,7 +461,12 @@ html {
     align-items: center;
     flex-wrap: wrap;
 }
+.nomail-container .nomail-card{
+    position: relative;
+    padding-top: 5rem;
+}
 .nomail-container .nomail-card a {
+    position: relative;
     display: block;
     text-decoration: none;
     width: 20rem;
@@ -444,7 +477,7 @@ html {
     border: .3px solid #fff;
     border-radius: 3px;
     backdrop-filter: blur(3px);
-    background: rgba(187, 224, 108, .6);
+    background: var(--primary-color-opacity);
 }
 .nomail-container .nomail-card i {
     font-size: 2rem;
@@ -460,7 +493,7 @@ html {
     border: .3px solid #fff;
     border-radius: 3px;
     backdrop-filter: blur(3px);
-    background: rgba(187, 224, 108, .6);
+    background: var(--primary-color-opacity);
 }
 
 /* ---------------- Footer Section ------------------- */
@@ -468,7 +501,7 @@ html {
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: #AACB73;
+    background-color: var(--secondary-color);
 }
 
 .footer-container {
@@ -509,7 +542,7 @@ html {
     font-size: 1.2rem;
 }
 .footer-content-3 i {
-    color: #ac0909;
+    color: var(--accent-color);
     font-size: 1.5rem;
     padding: 15px;
 }

@@ -5,10 +5,11 @@
     text-align: center;
     min-height: 45rem;
     padding: 2rem;
-    background-color: #DDFFBB;
+    background-color: var(--primary-color);
 }
 
 .flip-book-header .flip-book-main-header {
+    color: var(--secondary-color);
     font-size: 3rem;
     margin: 3rem;
 }
@@ -34,7 +35,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: var(--secondary-color);
     border-radius: 0 16px 16px 0;
     box-shadow: 0 0 3px 3px black;
 }
@@ -55,7 +56,7 @@
     transition: 1s;
 }
 
-.flip-book-card .flip-book-front-cover h3 span {
+.flip-book-card .flip-book-front-cover .flip-book-span {
     font-size: 1.2rem;
     color: white;
     transition: 1s;

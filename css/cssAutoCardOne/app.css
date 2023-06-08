@@ -5,11 +5,12 @@
     justify-content: center;
     align-items: center;
     min-height: 45rem;
-    background: #DDFFBB;
+    background: var(--primary-color);
 }
 
 .horizontal-card-big-header .horizontal-card-big-main-header {
     text-align: center;
+    color: var(--secondary-color);
     font-size: 3rem;
     padding-bottom: 3rem;
 }
@@ -29,16 +30,16 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 25rem;
-    /* overflow: hidden; */
+    height: 28rem;
     border-radius: 2rem;
 }
+
 .horizontal-card-big-container svg {
     position: absolute;
     bottom: 0;
     height: cover;
     background: transparent;
-    opacity: .6;
+    opacity: .5;
     z-index: -1;
 }
 
@@ -47,10 +48,11 @@
     height: 20rem;
     width: 15rem;
     margin: 1rem;
-    border: 1px solid rgb(4, 0, 253);
+    border: 1px solid rgb(165, 85, 236);
     box-shadow: 0 0 8px rgba(0, 0, 0, .5);
     border-radius: 1rem;
     cursor: pointer;
+    /* border: 1px solid black; */
 }
 
 .horizontal-card-big-container .card-big-two {
@@ -58,10 +60,11 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    color: aliceblue;
+    color: white;
     height: 20rem;
     width: 15rem;
     margin: 1rem;
+    /* border: 1px solid black; */
 }
 
 .horizontal-card-big-container .card-big-two h4 {
@@ -69,6 +72,7 @@
 }
 
 .horizontal-card-big-container .card-big-two h3 {
+    color: var(--accent-color);
     font-size: 4rem;
     margin-top: 2rem;
 }
@@ -77,10 +81,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    color: aliceblue;
+    color: white;
     height: 20rem;
     width: 15rem;
     margin: 1rem;
+    /* border: 1px solid black; */
 }
 
 .horizontal-card-big-container .card-big-three ul {
@@ -102,26 +107,12 @@
 }
 
 .horizontal-card-big-container .card-big-three span {
-    font-size: 2.2rem;
-    font-weight: 900;
+    /* font-size: 2.2rem; */
+    font-weight: bold;
 } 
-/* Pop Up  */
-.close-button-1 {
-    cursor:pointer;
-    position:absolute;
-    right:20px;
-    top:20px;
-    width:30px;
-    height:30px;
-    background:#222;
-    color:#fff;
-    font-size:25px;
-    font-weight:600;
-    line-height:30px;
-    text-align:center;
-    border-radius:50%;
-    display: none;
-}
+
+/* -----Pop Up ----- */
+
 .horizontal-card-big-overlay {
     position:fixed;
     top:0px;
@@ -141,8 +132,8 @@
     left:50%;
     transform:translate(-50%,-50%) scale(0);
     background:#fff;
-    width: 19rem;
-    height: 25rem;
+    width: 22rem;
+    height: 28rem;
     z-index: 2;
     text-align:center;
     box-sizing:border-box;
@@ -155,6 +146,259 @@
 }
 .card-big-one.active .horizontal-card-big-overlay {
     display:block;
+}
+
+@media (max-width: 991px) {
+    .horizontal-card-big-header .horizontal-card-big-main-header {
+        font-size: 2.5rem;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+
+    .horizontal-card-big-container {
+        height: 20rem;
+        border-radius: 2rem;
+    }
+
+    .horizontal-card-big-container .card-big-one .card-big-one-img {
+        height: 18rem;
+        width: 13rem;
+        margin: .5rem;
+        border-radius: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two {
+        height: 20rem;
+        width: 15rem;
+        margin: .5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h4 {
+        font-size: 2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h3 {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three {
+        height: 20rem;
+        width: 12rem;
+        margin: .5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three ul {
+        gap: .8rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li {
+        font-size: 1.8rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li:nth-child(5) {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three span {
+        font-size: 2.2rem;
+        font-weight: bold;
+    } 
+
+    .card-big-one-window {
+        width: 16rem;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .horizontal-card-big-header .horizontal-card-big-main-header {
+        font-size: 2rem;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+
+    .horizontal-card-big-container {
+        height: 18rem;
+        border-radius: 2rem;
+    }
+
+    .horizontal-card-big-container .card-big-one .card-big-one-img {
+        height: 15rem;
+        width: 11rem;
+        margin: .5rem;
+        border-radius: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two {
+        height: 17rem;
+        width: 12rem;
+        margin: .5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h4 {
+        font-size: 1.6rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three {
+        height: 17rem;
+        width: 10rem;
+        margin: .5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three ul {
+        gap: .6rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li {
+        font-size: 1.4rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li:nth-child(5) {
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three span {
+        font-size: 1.5rem;
+        font-weight: bold;
+    } 
+
+    .card-big-one-window {
+        width: 14rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .horizontal-card-big-header .horizontal-card-big-main-header {
+        font-size: 2rem;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+
+    .horizontal-card-big-container {
+        height: 18rem;
+        border-radius: 2rem;
+    }
+
+    .horizontal-card-big-container .card-big-one .card-big-one-img {
+        height: 14rem;
+        width: 10rem;
+        margin: .2rem;
+        border-radius: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two {
+        margin: .2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h4 {
+        font-size: 1.2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h3 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three {
+        margin-right: .4rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three ul {
+        gap: .5rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li {
+        font-size: 1.2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li:nth-child(5) {
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three span {
+        font-size: 1.3rem;
+        font-weight: bold;
+    } 
+
+    .card-big-one-window {
+        width: 14rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .horizontal-card-big-header .horizontal-card-big-main-header {
+        font-size: 1.8rem;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+
+    .horizontal-card-big-container {
+        height: 14rem;
+        border-radius: 1rem;
+    }
+
+    .horizontal-card-big-container .card-big-one .card-big-one-img {
+        height: 12rem;
+        width: 8rem;
+        margin: .2rem;
+        border-radius: .6rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two {
+        margin: .2rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h4 {
+        font-size: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-two h3 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three {
+        margin-right: .4rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three ul {
+        gap: .4rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li {
+        font-size: 1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three li:nth-child(5) {
+        font-weight: 900;
+        font-size: 1.1rem;
+    }
+    
+    .horizontal-card-big-container .card-big-three span {
+        font-size: 1.1rem;
+        font-weight: bold;
+    } 
+
+    .card-big-one-window {
+        width: 10rem;
+        height: 14rem;
+    }
 }
 
 
