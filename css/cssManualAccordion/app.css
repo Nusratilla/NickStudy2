@@ -1,7 +1,6 @@
 
 .swiper-pagination-bullet-active {
     transform: scale(1.5);
-    --swiper-pagination-color: #ff4321;
     opacity: .8; 
 }
 

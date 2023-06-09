@@ -26,9 +26,8 @@ const hiddenElements = document.querySelectorAll('.animation-right, .animation-l
 const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
-            entry.target.classList.toggle('show-animation', entry.isIntersecting)
+            entry.target.classList.toggle('show-animation', entry.isIntersecting);
         });
-    
     },
     {
         threshold: .15,
@@ -41,5 +40,13 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 function togglePopup(idname){
     document.getElementById(idname).classList.toggle("active");
-}
+};
 
+// ---------------Dark Theme--------------- 
+
+var iconMoon = document.querySelector('#icon-moon');
+
+iconMoon.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    iconMoon.classList.toggle('bi-sun-fill');
+});
