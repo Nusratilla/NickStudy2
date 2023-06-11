@@ -3,6 +3,9 @@ var swiper = new Swiper(".testimonials-slider", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
+    keyboard: {
+      enabled: true,
+    },
     coverflowEffect: {
       rotate: 70,
       stretch: 0,

@@ -10,7 +10,6 @@
     --secondary-color: #9818D6;
     --primary-color-opacity: rgba(165, 85, 236, .3);
     --accent-color: #ff4321;
-    --swiper-pagination-color: #ff4321;
 }
 .dark-theme {
     --primary-color: #000000;
@@ -40,25 +39,31 @@ span {
 .animation-right {
     opacity: 0;
     filter: blur(3px);
-    transform: translateX(100%);
-    transition: .5s;
+    transform: translateX(200px);
+    transition: all .5s ease-in-out;
 }
 .animation-left {
     opacity: 0;
     filter: blur(3px);
-    transform: translateX(-100%);
-    transition: .5s;
+    transform: translateX(-200px);
+    transition: all .5s ease-in-out;
 }
 .animation-bottom {
     opacity: 0;
-    filter: blur(3px);
-    transition: .5s; 
+    filter: blur(3px); 
     scale: .5;
+    transition: all .5s ease-in-out;
+}
+.animation-rotate {
+    opacity: 0;
+    transform: rotateY(100deg);
+    transition: all 2s ease-in-out;
 }
 .show-animation {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0);
+    transform: rotateY(0);
     scale: 1;
 }
 
@@ -534,7 +539,7 @@ span {
 .footer-foot {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 12rem;
+    padding: 1rem 10rem;
     color: #FFF;
 }
 
@@ -546,7 +551,9 @@ span {
     }
     .footer-foot {
         display: flex;
-        padding: 1rem 3rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
     }
     
 }

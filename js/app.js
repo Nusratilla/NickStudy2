@@ -21,7 +21,7 @@ for (i = 0; i<accordion.length; i++ ){
 
 // ---------------Scroll Animation--------------- 
 
-const hiddenElements = document.querySelectorAll('.animation-right, .animation-left, .animation-bottom');
+const hiddenElements = document.querySelectorAll('.animation-right, .animation-left, .animation-bottom, .animation-rotate');
 
 const observer = new IntersectionObserver(
     entries => {
@@ -48,5 +48,6 @@ var iconMoon = document.querySelector('#icon-moon');
 
 iconMoon.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
+    body.style.transition = '1s';
     iconMoon.classList.toggle('bi-sun-fill');
 });
