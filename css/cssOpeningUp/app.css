@@ -3,12 +3,10 @@
     position: relative;
     min-height: 40rem;
     background: var(--primary-color);
+    /* z-index: 1; */
 }
 .opening-up-header .opening-up-main-header {
-    text-align: center;
-    color: var(--secondary-color);
-    padding-top: 3rem;
-    font-size: 3rem;
+    padding-top: 6rem;
 }
 .opening-up-wrapper {
     display: flex;
@@ -21,7 +19,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px 50px;
+    gap: 120px 50px;
     padding: 100px 50px;
 }
 .opening-up-container .opening-up-card {
@@ -46,13 +44,13 @@
     height: 220px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #333;
+    border: 1px solid var(--primary-color-opacity);
     transition: .5s;
 }
 .opening-up-card:hover .img-box {
     top: -100px;
     scale: 0.75;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow: var(--primary-color-opacity);
 }
 .opening-up-card .img-box img {
     position: absolute;
@@ -82,4 +80,9 @@
 }
 .opening-up-card .content-box p {
     color: #000000;
+}
+@media (max-width: 600px) {
+    .opening-up-card .content-box h3 {
+        font-size: 1.3rem;
+    }
 }

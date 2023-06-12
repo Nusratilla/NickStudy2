@@ -9,9 +9,7 @@
 }
 
 .flip-book-header .flip-book-main-header {
-    color: var(--secondary-color);
-    font-size: 3rem;
-    margin: 3rem;
+    margin: 5rem;
 }
 
 .flip-book-header .flip-book-wrapper {
