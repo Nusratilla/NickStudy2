@@ -48,6 +48,5 @@ var iconMoon = document.querySelector('#icon-moon');
 
 iconMoon.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
-    body.style.transition = '1s';
     iconMoon.classList.toggle('bi-sun-fill');
 });

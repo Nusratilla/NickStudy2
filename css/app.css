@@ -45,7 +45,6 @@ h2 {
         font-size: 2.5rem;
     }
 }
-
 @media (max-width: 600px) {
     h2 {
         font-size: 2.2rem;
@@ -60,19 +59,16 @@ h2 {
 /* ---------- Animation Section ---------- */
 .animation-right {
     opacity: 0;
-    filter: blur(3px);
-    transform: translateX(200px);
+    transform: translateX(10px);
     transition: all .5s ease-in-out;
 }
 .animation-left {
     opacity: 0;
-    filter: blur(3px);
-    transform: translateX(-200px);
+    transform: translateX(-10px);
     transition: all .5s ease-in-out;
 }
 .animation-bottom {
     opacity: 0;
-    filter: blur(3px); 
     scale: .5;
     transition: all .5s ease-in-out;
 }
@@ -83,10 +79,16 @@ h2 {
 }
 .show-animation {
     opacity: 1;
-    filter: blur(0px);
     transform: translateX(0);
     transform: rotateY(0);
     scale: 1;
+}
+
+@media (max-width: 600px) {
+    .animation-right, .animation-left {
+        transition: none;
+        transform: translateX(0);
+    }
 }
 
 /* ----------------------Menu Bar ----------------- */
@@ -288,26 +290,128 @@ h2 {
     background: var(--dark-color-opacity);
     z-index: 999;
 }
-@media (max-width: 500px) {
-    .absolute-telegram-contact, .absolute-phone-contact {
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 1rem;
-        padding: .2rem;
-    }
+
+/* -------------- About Book Flip ----------- */
+.book-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 1rem;
+  
 }
+  
+.book-header h2 {
+      padding: 1rem;
+      padding-top: 3rem;
+}
+  
+.book-header h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+  
+.book-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.book-container {
+    position: relative;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    margin: 1.5rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+  
+  .book-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem;
+    margin-left: 12%;
+}
+  
+.book-cover {
+    top: 0;
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+  
+.book-container:hover .book-cover {
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+  
+.book-cover .book-cover-text {
+    justify-content: center;
+    padding: .8rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #FFF;
+}  
 
 /*-------------------- Belt-Slider ---------------------- */
-
 .belt-slider-main {
     display: grid;
     place-items: center;
     min-height: 50vh;
     background-color: var(--primary-color);
+    padding: 2rem 0;
 }
 
 .belt-slider-main .belt-slider-main-header {
-    padding: 5rem;
+    padding: 3rem;
 }
 
 .belt-slider-main .belt-slider {
@@ -351,12 +455,6 @@ h2 {
     transition: 1s;
     box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
 }
-
-.belt-slides img:hover {
-    transform: translateZ(16px);
-    z-index: 3;
-}
-
 .belt-slider-main .belt-slider::before,
 .belt-slider-main .belt-slider::after {
     content: '';
@@ -376,9 +474,152 @@ h2 {
     top: 0;
     transform: rotateZ(180deg);
 }
+@media (max-width: 600px) {
+    .belt-slider-main .belt-slider {
+        height: 150px;
+    }
+    .belt-slider .belt-slider-wrapper {
+        width: calc(250px * 18);
+    }
+    @keyframes scroll {
+        0% {transform: translateX(0);}
+        100% {transform: translateX(calc(-250px * 9));}
+    }
+    .belt-slider-wrapper .belt-slides {
+        height: 150px;
+        width: 250px;
+        margin: 0 5px;
+    }
+    .belt-slides img {
+        height: 150px;
+        width: 250px;
+    }
+    
+}
+@media (max-width: 400px) {
+    .belt-slider-main .belt-slider {
+        height: 120px;
+    }
+    .belt-slider .belt-slider-wrapper {
+        width: calc(200px * 18);
+    }
+    @keyframes scroll {
+        0% {transform: translateX(0);}
+        100% {transform: translateX(calc(-200px * 9));}
+    }
+    .belt-slider-wrapper .belt-slides {
+        height: 120px;
+        width: 200px;
+        margin: 0 4px;
+    }
+    .belt-slides img {
+        height: 120px;
+        width: 200px;
+    }
+    
+}
+
+/* --------------------------Courses opening-up-card ------------------ */
+.opening-up-header {
+    position: relative;
+    min-height: 40rem;
+    background: var(--primary-color);
+}
+.opening-up-header .opening-up-main-header {
+    padding-top: 6rem;
+}
+.opening-up-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opening-up-wrapper .opening-up-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 120px 50px;
+    padding: 100px 50px;
+}
+.opening-up-container .opening-up-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
+    transition: .5s;
+}
+.opening-up-container .opening-up-card:hover {
+    height: 400px;
+}
+.opening-up-card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color-opacity);
+    transition: .5s;
+}
+.opening-up-card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: var(--primary-color-opacity);
+}
+.opening-up-card .img-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.opening-up-card .content-box {
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    top: 250px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    transition: .5s;
+}
+.opening-up-card:hover .content-box {
+    top: 110px;
+    height: 250px;
+}
+.opening-up-card .content-box h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem 0;
+}
+.opening-up-card .content-box p {
+    color: #000000;
+}
+@media (max-width: 500px) {
+    .opening-up-card .content-box h3 {
+        font-size: 1.3rem;
+    }
+    .opening-up-container .opening-up-card {
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+    }
+    .opening-up-card .img-box {
+        width: 280px;
+    }
+    .opening-up-wrapper .opening-up-container {
+        gap: 120px 0;
+        padding: 100px 0;
+    }
+}
 
 /* --------------------------Accordion FAQ ------------------ */
-
 .accordionFaq {
     display: flex;
     justify-content: center;
@@ -562,6 +803,7 @@ h2 {
 @media (max-width: 600px) {
     .nomail-container .nomail-card a {
         font-size: 1.3rem;
+        width: 18rem;
     }
     .nomail-container .nomail-card i {
         font-size: 1.3rem;
@@ -574,6 +816,7 @@ h2 {
 /* ---------------- Footer Section ------------------- */
 
 .footer {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color);
@@ -597,16 +840,8 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #FFF;
-    font-size: 2rem;
     padding: 10px;
-    font-family: Verdana, Tahoma, sans-serif;
 }
-
-.footer-content-1 h3 {
-    font-family: 'Courgette';
-}
-
 .logo-foot {
     height: 16rem;
 }
@@ -640,8 +875,7 @@ h2 {
         flex-direction: column;
         text-align: center;
         padding: 2rem 1rem;
-    }
-    
+    }    
 }
 
 

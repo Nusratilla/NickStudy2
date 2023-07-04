@@ -3,13 +3,10 @@ var swiper = new Swiper(".testimonials-slider", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    keyboard: {
-      enabled: true,
-    },
     coverflowEffect: {
-      rotate: 70,
+      rotate: 30,
       stretch: 0,
-      depth: 125,
+      depth: 100,
       modifier: 1,
       slideShadows: true,
     },
